@@ -12,17 +12,29 @@
 $(document).ready(function(){
 	$('.tab-content > div:eq(1),.tab-content > div:eq(2)').hide();		
 	$('.tab-menu li > a:eq(0)').click(function(){
-		//console.log('일림');
+		//console.log('알림');
+		$('.tab-menu li > a:eq(1)').removeClass('on');
+		$('.tab-menu li > a:eq(0)').addClass('on');
+		$('.tab-menu li > a:eq(2)').removeClass('on');
 		$('.tab-content > div:eq(0)').show();
 		$('.tab-content > div:eq(1)').hide();
 		$('.tab-content > div:eq(2)').hide();
 	});
-	$('tab-menu li > a:eq(1)').click(function(){
-		$('tab-content > div:eq(0)').hide();
-		$('tab-content > div:eq(1)').show();
-		$('tab-content > div:eq(2)').hide();
-
-
+	$('.tab-menu li > a:eq(1)').click(function(){
+		$('.tab-menu li > a:eq(0)').removeClass('on');
+		$('.tab-menu li > a:eq(1)').addClass('on');
+		$('.tab-menu li > a:eq(2)').removeClass('on');
+		$('.tab-content > div:eq(0)').hide();
+		$('.tab-content > div:eq(1)').show();
+		$('.tab-content > div:eq(2)').hide();
+	});
+	$('.tab-menu li > a:eq(2)').click(function(){
+		$('.tab-menu li > a:eq(0)').removeClass('on');
+		$('.tab-menu li > a:eq(1)').removeClass('on');
+		$('.tab-menu li > a:eq(2)').addClass('on');
+		$('.tab-content > div:eq(0)').hide();
+		$('.tab-content > div:eq(1)').hide();
+		$('.tab-content > div:eq(2)').show();
 	});
 });
 </script>
@@ -32,7 +44,7 @@ $(document).ready(function(){
 .tab-menu li a { display:block; font-size:20px; font-weight:bold; text-align:center; }
 .tab-menu li a.on { background:blue; }
 .tab-content div { width:100%; }
-.tab-content p { font-size:15px; }
+.tab-content p { font-size:35px; }
 .tab-content ol {}
 .tab-content ol li { border-bottom:1px solid gold;}
 </style>
