@@ -36,6 +36,29 @@ $(document).ready(function(){
 		$('.tab-content > div:eq(1)').hide();
 		$('.tab-content > div:eq(2)').show();
 	});
+
+	$('.tab-content02 > div:eq(1),.tab-content02 > div:eq(2)').hide();
+	$('.tab-menu02 li > a:eq(0)').mouseover(function(){
+		$('.tab-menu02 li > a:eq(0)').addClass('on');
+		$('.tab-menu02 li > a:eq(1)').removeClass('on');
+		$('.tab-menu02 li > a:eq(2)').removeClass('on');
+		$('.tab-content02 > div:eq(1),.tab-content02 > div:eq(2)').hide();
+		$('.tab-content02 > div:eq(0)').show();
+	});
+	$('.tab-menu02 li > a:eq(1)').mouseover(function(){
+		$('.tab-menu02 li > a:eq(1)').addClass('on');
+		$('.tab-menu02 li > a:eq(0)').removeClass('on');
+		$('.tab-menu02 li > a:eq(2)').removeClass('on');
+		$('.tab-content02 > div:eq(0),.tab-content02 > div:eq(2)').hide();
+		$('.tab-content02 > div:eq(1)').show();
+	});
+	$('.tab-menu02 li > a:eq(2)').mouseover(function(){
+		$('.tab-menu02 li > a:eq(2)').addClass('on');
+		$('.tab-menu02 li > a:eq(0)').removeClass('on');
+		$('.tab-menu02 li > a:eq(1)').removeClass('on');
+		$('.tab-content02 > div:eq(0),.tab-content02 > div:eq(1)').hide();
+		$('.tab-content02 > div:eq(2)').show();
+	});
 });
 </script>
 <style>
@@ -47,6 +70,15 @@ $(document).ready(function(){
 .tab-content p { font-size:35px; }
 .tab-content ol {}
 .tab-content ol li { border-bottom:1px solid gold;}
+
+.tab-menu02 { float:left;width:30%; height:400px; outline:1px solid #c64; }
+.tab-menu02 li {height:33%; vertical-align:middle; border:1px solid #222;}
+.tab-menu02 li a {display:block; height:100%; font-size:35px; font-weight:bold; text-align:center; }
+.tab-menu02 li a.on { background:red; }
+.tab-content02 div { float:left; width:50%; height:400px; }
+.tab-content02 p {  }
+
+
 </style>
 </head>
 <body>
@@ -80,6 +112,23 @@ $(document).ready(function(){
 						<li>2.첫문장</li>
 						<li>3.첫문장</li>
 					</ol>
+				</div>
+			</div>
+
+			<ul class="tab-menu02">
+				<li><a href="#none" class="on">Tab01</a></li>
+				<li><a href="#none">Tab02</a></li>
+				<li><a href="#none">Tab03</a></li>
+			</ul>
+			<div class="tab-content02">
+				<div>
+					<p><img src="images/common/@img_gallery01.jpg" alt="이미지01" /></p>	
+				</div>
+				<div>
+					<p><img src="images/common/@img_buildinginfo01.jpg" alt="이미지02" /></p>	
+				</div>
+				<div>
+					<p><img src="images/common/@img_buildinginfo01.jpg" alt="이미지03" /></p>	
 				</div>
 			</div>
 <!-- //wrap -->
